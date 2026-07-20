@@ -117,8 +117,6 @@ Paste a sample of your recommender's output here as a text block so a reader can
 
 2. 
 
-**Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
-
 ---
 
 ## Experiments You Tried
@@ -129,6 +127,135 @@ Use this section to document the experiments you ran. For example:
 - What happened when you added tempo or valence to the score
 - How did your system behave for different types of users
 
+Model 1:
+high_energy_pop = {
+    "favorite_genre": "pop",
+    "favorite_mood": "happy",
+    "target_energy": 0.90,
+    "target_tempo_bpm": 130,
+    "target_valence": 0.85,
+    "target_danceability": 0.90,
+    "target_acousticness": 0.15
+}
+Result:
+1. 🎶 Sunrise City - Neon Echo
+   ⭐ Score: 9.00/10
+   🎼 Genre: pop
+   😊 Mood : happy
+   💡 Reason(s): Genre matched, Mood matched, Similar tempo, Very similar energy, Similar positivity, Acousticness matched
+============================================================
+2. 🎶 Gym Hero - Max Pulse
+   ⭐ Score: 8.50/10
+   🎼 Genre: pop
+   😊 Mood : intense
+   💡 Reason(s): Genre matched, Very similar tempo, Very similar energy, Danceability matched, Similar positivity, Acousticness matched
+============================================================
+3. 🎶 Rooftop Lights - Indigo Parade
+   ⭐ Score: 6.00/10
+   🎼 Genre: indie pop
+   😊 Mood : happy
+   💡 Reason(s): Mood matched, Similar tempo, Similar energy, Danceability matched, Similar positivity
+============================================================
+4. 🎶 Electric Bloom - Aurora X
+   ⭐ Score: 5.50/10
+   🎼 Genre: EDM
+   😊 Mood : Energetic
+   💡 Reason(s): Very similar tempo, Very similar energy, Danceability matched, Similar positivity
+============================================================
+5. 🎶 City Lights - Nova Skyline
+   ⭐ Score: 5.00/10
+   🎼 Genre: Synthpop
+   😊 Mood : Upbeat
+   💡 Reason(s): Similar tempo, Similar energy, Danceability matched, Similar positivity, Acousticness matched
+=========================================
+
+
+Model 2:
+chill_lofi = {
+    "favorite_genre": "lofi",
+    "favorite_mood": "calm",
+    "target_energy": 0.30,
+    "target_tempo_bpm": 75,
+    "target_valence": 0.50,
+    "target_danceability": 0.40,
+    "target_acousticness": 0.85
+}
+
+Result:
+1. 🎶 Library Rain - Paper Lanterns
+   ⭐ Score: 8.00/10
+   🎼 Genre: lofi
+   😊 Mood : chill
+   💡 Reason(s): Genre matched, Very similar tempo, Very similar energy, Similar positivity, Acousticness matched
+============================================================
+2. 🎶 Focus Flow - LoRoom
+   ⭐ Score: 7.50/10
+   🎼 Genre: lofi
+   😊 Mood : focused
+   💡 Reason(s): Genre matched, Very similar tempo, Similar energy, Similar positivity, Acousticness matched
+============================================================
+3. 🎶 Midnight Coding - LoRoom
+   ⭐ Score: 6.50/10
+   🎼 Genre: lofi
+   😊 Mood : chill
+   💡 Reason(s): Genre matched, Very similar tempo, Similar energy, Similar positivity
+============================================================
+4. 🎶 Ocean Drift - Blue Horizon
+   ⭐ Score: 6.50/10
+   🎼 Genre: Ambient
+   😊 Mood : Calm
+   💡 Reason(s): Mood matched, Similar tempo, Very similar energy, Similar positivity, Acousticness matched
+============================================================
+5. 🎶 Spacewalk Thoughts - Orbit Bloom
+   ⭐ Score: 5.00/10
+   🎼 Genre: ambient
+   😊 Mood : chill
+   💡 Reason(s): Similar tempo, Very similar energy, Danceability matched, Acousticness matched
+============================================================
+
+
+Model 3:
+impossible_profile = {
+    "favorite_genre": "classical",
+    "favorite_mood": "energetic",
+    "target_energy": 1.00,
+    "target_tempo_bpm": 220,
+    "target_valence": 1.00,
+    "target_danceability": 1.00,
+    "target_acousticness": 1.00
+}
+
+Result:
+1. 🎶 Electric Bloom - Aurora X
+   ⭐ Score: 5.00/10
+   🎼 Genre: EDM
+   😊 Mood : Energetic
+   💡 Reason(s): Mood matched, Very similar energy, Danceability matched, Similar positivity
+============================================================
+2. 🎶 Moon Waltz - Silver Quartet
+   ⭐ Score: 3.00/10
+   🎼 Genre: Classical
+   😊 Mood : Peaceful
+   💡 Reason(s): Genre matched, Acousticness matched
+============================================================
+3. 🎶 Gym Hero - Max Pulse
+   ⭐ Score: 2.00/10
+   🎼 Genre: pop
+   😊 Mood : intense
+   💡 Reason(s): Very similar energy
+============================================================
+4. 🎶 Rooftop Lights - Indigo Parade
+   ⭐ Score: 2.00/10
+   🎼 Genre: indie pop
+   😊 Mood : happy
+   💡 Reason(s): Similar energy
+============================================================
+5. 🎶 City Lights - Nova Skyline
+   ⭐ Score: 2.00/10
+   🎼 Genre: Synthpop
+   😊 Mood : Upbeat
+   💡 Reason(s): Similar energy
+============================================================
 ---
 
 ## Limitations and Risks
@@ -154,7 +281,8 @@ Read and complete `model_card.md`:
 Write 1 to 2 paragraphs here about what you learned:
 
 - about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+
+I learned a lot of about recommendation systems, and machine learning in this lesson. I think I will be able to applied these learning concepts into my personal coding projects.
 
 
 

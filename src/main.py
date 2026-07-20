@@ -17,17 +17,17 @@ def main() -> None:
 
 
     # Starter example profile
-    user_prefs = {
-    "favorite_genre": "pop",
-    "favorite_mood": "happy",
-    "target_energy": 0.85,
-    "target_tempo_bpm": 125,
-    "target_valence": 0.80,
-    "target_danceability": 0.82,
-    "target_acousticness": 0.20
+    impossible_profile = {
+    "favorite_genre": "classical",
+    "favorite_mood": "energetic",
+    "target_energy": 1.00,
+    "target_tempo_bpm": 220,
+    "target_valence": 1.00,
+    "target_danceability": 1.00,
+    "target_acousticness": 1.00
 }
 
-    recommendations = recommend_songs(user_prefs, songs, k=5)
+    recommendations = recommend_songs(impossible_profile, songs, k=5)
 
     print("\n🎵 Top Song Recommendations 🎵\n")
 
