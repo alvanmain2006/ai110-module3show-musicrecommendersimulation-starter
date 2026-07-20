@@ -11,7 +11,7 @@ Your goal is to:
 - Evaluate what your system gets right and wrong
 - Reflect on how this mirrors real world AI recommenders
 
-Replace this paragraph with your own summary of what your version does.
+So my version of a recommender system, would first let user pick a bunch of song that they like, then average out the data of the song, then I will use that data as the preference to compare to other new songs. I will calculate the difference between the preference and the new songs, then applied the weight for each difference score of a song. My version will prioritize a song's tempo, so it will have more of a weight compare to other features. Once all the songs are computed, we rank them based on the score they get, and recommend the most similar song.
 
 ---
 
@@ -28,7 +28,43 @@ Some prompts to answer:
 - How do you choose which songs to recommend
 
 You can include a simple diagram or bullet list if helpful.
+User Preferences
+                      │
+                      ▼
+        Load songs from songs.csv
+                      │
+                      ▼
+      Loop through every song in the dataset
+                      │
+                      ▼
+        Compare song features with user profile
+                      │
+                      ▼
+        Calculate weighted similarity score
+                      │
+                      ▼
+        Save (song, score, explanation)
+                      │
+                      ▼
+      Sort songs by score (highest first)
+                      │
+                      ▼
+          Return Top 5 Recommendations
 
+          Algorithm Recipe
+Load every song from the CSV file.
+Create a user preference profile containing genre, mood, tempo, energy, valence, danceability, and acousticness.
+Compare every song to the user profile.
+Award weighted points based on feature similarity:
+Genre match: +2.5
+Mood match: +1.5
+Tempo similarity: up to +2.0
+Energy similarity: up to +1.5
+Danceability similarity: up to +1.0
+Valence similarity: up to +1.0
+Acousticness similarity: up to +0.5
+Calculate a total score for each song.
+Rank all songs by score and return the top k recommendations along with an explanation of why each song was selected.
 ---
 
 ## Getting Started
@@ -70,14 +106,16 @@ You can add more tests in `tests/test_recommender.py`.
 
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
-```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
-```
+🎵 Top Song Recommendations 🎵
+
+1. 🎶 Sunrise City - Neon Echo
+   ⭐ Score: 9.50/10
+   🎼 Genre: pop
+   😊 Mood : happy
+   💡 Reason(s): Genre matched, Mood matched, Similar tempo, Very similar energy, Danceability matched, Similar positivity, Acousticness matched
+============================================================
+
+2. 
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
